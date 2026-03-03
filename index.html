@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoNova | Live Tracker</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@400;500&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <i class="fa-brands fa-bitcoin" style="color:#38bdf8;"></i> CryptoNova
+        </div>
+        <ul class="nav-links">
+            <li><a href="#" class="nav-link active" data-target="home">Home</a></li>
+            <li><a href="#" class="nav-link" data-target="markets">Markets</a></li>
+            <li><a href="#" class="nav-link" data-target="trending">Trending</a></li>
+            <li><a href="#" class="nav-link" data-target="about">About</a></li>
+        </ul>
+        <div class="search-container">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="searchInput" placeholder="Search coins...">
+        </div>
+        <div class="mobile-menu-btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <!-- Home Section -->
+        <section id="home" class="page-section active">
+            <div class="hero">
+                <h1>Track Cryptocurrency<br><span class="highlight">In Real-Time</span></h1>
+                <p>Get the latest prices, market cap, and 24h volume for top coins.</p>
+                <button class="cta-btn" onclick="document.querySelector('[data-target=\'markets\']').click()">Explore
+                    Markets</button>
+            </div>
+
+            <div class="stats-container">
+                <div class="stat-box">
+                    <h3>Global Market Cap</h3>
+                    <p id="globalMarketCap">
+                    <div class="loader" style="width:20px;height:20px;margin:0"></div>
+                    </p>
+                </div>
+                <div class="stat-box">
+                    <h3>24h Volume</h3>
+                    <p id="globalVolume">
+                    <div class="loader" style="width:20px;height:20px;margin:0"></div>
+                    </p>
+                </div>
+                <div class="stat-box">
+                    <h3>BTC Dominance</h3>
+                    <p id="btcDominance">
+                    <div class="loader" style="width:20px;height:20px;margin:0"></div>
+                    </p>
+                </div>
+            </div>
+
+            <h2>Top Movers (24h)</h2>
+            <div class="cards-grid" id="topMoversContainer">
+                <div class="loader"></div>
+            </div>
+        </section>
+
+        <!-- Markets Section -->
+        <section id="markets" class="page-section">
+            <h2>Cryptocurrency Markets</h2>
+            <div class="market-table-container">
+                <table class="market-table">
+                    <thead>
+                        <tr>
+                            <th>Coin</th>
+                            <th>Price</th>
+                            <th>24h Change</th>
+                            <th>Market Cap</th>
+                            <th>Volume (24h)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="marketTableBody">
+                        <tr>
+                            <td colspan="5" style="text-align:center;">
+                                <div class="loader"></div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Trending Section -->
+        <section id="trending" class="page-section">
+            <h2>Trending Coins</h2>
+            <p class="subtitle">Top searches in the last 24 hours</p>
+            <div class="cards-grid" id="trendingContainer">
+                <div class="loader"></div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="page-section">
+            <div class="about-content">
+                <h2>About CryptoNova</h2>
+                <p>Welcome to CryptoNova, your premier destination for live cryptocurrency tracking.</p>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fa-solid fa-bolt"></i>
+                        <h3>Real-time Data</h3>
+                        <p>Powered by CoinGecko API for accurate and up-to-date pricing.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fa-solid fa-magnifying-glass-chart"></i>
+                        <h3>Deep Insights</h3>
+                        <p>Track global market trends and discover what's moving.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                        <h3>Responsive Design</h3>
+                        <p>A seamless experience across all your devices.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 CryptoNova. Made with <i class="fa-solid fa-heart" style="color:#ef4444;"></i>. Data provided by
+            CoinGecko.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
